@@ -1,0 +1,109 @@
+/* reset default */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+/* *********************** */
+.container {
+  background: #23252f;
+  width: 100%;
+  height: 100vh;
+  color: aliceblue;
+  overflow: hidden;
+  font-family: "Arimo";
+  /* font-size: clamp(0.5rem, 1vw, 2rem); */
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-container {
+  /* border: solid red; */
+  width: clamp(290px, 20vw, 980px);
+  /* min-height: 100vh; */
+}
+
+.top-container {
+  /* border: solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem auto;
+  font-size: clamp(0.8rem, 1vw, 2rem);
+}
+
+.bottom-container {
+  /* border: solid blue; */
+  width: 90%;
+  margin: 3rem auto;
+}
+
+span {
+  /* display: inline-block; */
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+span::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 2px;
+  background: #f78800;
+  left: 0;
+  bottom: -5px;
+}
+
+.bottom-container p {
+  margin-bottom: 1rem;
+  color: #f78800;
+  font-weight: bold;
+}
+
+.submit {
+  background: #f78800;
+  border: none;
+  padding: 0.5rem 2rem;
+  /* color: #161724; */
+  cursor: pointer;
+  margin-top: 0.8rem;
+  width: 100%;
+  transition: 0.3s;
+}
+.submit:hover {
+  background: #1d9bf0;
+  color: #efe;
+  transition: 0.3s;
+}
+
+input[type="text"]::placeholder {
+  padding-left: 0.5rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem 0;
+  transition: 0.5s;
+  border: solid transparent;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  border: none;
+  outline: none;
+  transition: 0.5s;
+  /* padding: 0.8rem 0; */
+  border: solid #f78800 3px;
+}
