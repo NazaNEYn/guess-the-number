@@ -1,3 +1,5 @@
+'use strict';
+
 // Generate a random number between 1 and 100 (inclusive)
 const randomNumber = Math.trunc(Math.random() * 100 + 1);
 
@@ -8,7 +10,7 @@ const maxTries = 5;
 let tries = 0;
 
 // For debugging purposes, you can uncomment this line to see the generated number
-// console.log(randomNumber); 
+console.log(randomNumber);
 
 // Add an event listener to the element with class "submit"
 document.querySelector(".submit").addEventListener("click", function () {
@@ -25,6 +27,8 @@ document.querySelector(".submit").addEventListener("click", function () {
     // Check if the user guessed correctly
     if (pickedNumber === randomNumber) {
       document.querySelector(".text").textContent = "You got it right!";
+
+      document.querySelector(".container").style.background = "#1c5d3b";
     } else {
       // Calculate the remaining tries
       const remainingTries = maxTries - tries;
@@ -47,6 +51,8 @@ document.querySelector(".submit").addEventListener("click", function () {
         document.querySelector(
           ".text"
         ).textContent = `You lost! The correct answer is ${randomNumber}.`;
+        document.querySelector(".container").style.background = "#880212";
+        // document.querySelector(".text").style.color = "#23252f";
       }
     }
   }
