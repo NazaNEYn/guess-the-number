@@ -60,7 +60,8 @@ document.querySelector(".submit").addEventListener("click", function () {
 
 
 document.querySelector(".reset").addEventListener("click", function () {
-  document.querySelector(".container").style.background = "#23252f";
-  document.querySelector(".text").textContent = "";
+  // Reload the page
+  window.location.reload();
 });
+
 
