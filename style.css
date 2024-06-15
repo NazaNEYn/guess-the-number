@@ -73,15 +73,17 @@ span::before {
   font-weight: bold;
 }
 
+.btn {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border: none;
+  transition: 0.3s;
+}
 .submit {
   background: #f78800;
-  border: none;
-  padding: 0.5rem 2rem;
   /* color: #161724; */
-  cursor: pointer;
   margin-top: 0.8rem;
-  width: 100%;
-  transition: 0.3s;
 }
 .submit:hover {
   background: #1d9bf0;
@@ -89,21 +91,31 @@ span::before {
   transition: 0.3s;
 }
 
-input[type="text"]::placeholder {
+input[type="number"]::placeholder {
   padding-left: 0.5rem;
 }
 
-input[type="text"] {
+input[type="number"] {
   padding: 0.5rem 0;
   transition: 0.5s;
   border: solid transparent;
   width: 100%;
 }
 
-input[type="text"]:focus {
+input[type="number"]:focus {
   border: none;
   outline: none;
   transition: 0.5s;
   /* padding: 0.8rem 0; */
   border: solid #f78800 3px;
+}
+
+.reset {
+  margin-top: 2.5rem;
+  /* background: #1d9bf0; */
+}
+
+.reset:hover {
+  /* background: #f78800; */
+  color: #1d9bf0;
 }
