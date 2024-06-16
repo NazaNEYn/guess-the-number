@@ -1,7 +1,8 @@
 'use strict';
 
 // Generate a random number between 1 and 100 (inclusive)
-const randomNumber = Math.trunc(Math.random() * 100 + 1);
+// we used let because we need to reassign the variable on the reset button
+let randomNumber = Math.trunc(Math.random() * 100 + 1);
 
 // Set the maximum number of allowed guesses
 const maxTries = 5;
@@ -60,8 +61,18 @@ document.querySelector(".submit").addEventListener("click", function () {
 
 
 document.querySelector(".reset").addEventListener("click", function () {
-  // Reload the page
-  window.location.reload();
+  // Reload the whole page
+  // window.location.reload();
+
+  document.querySelector(".container").style.background = "#23252f";
+  document.querySelector(".text").textContent = "Start guessing...";
+  document.querySelector(".msg").value = "";
+
+  // setting the number of tries back to 0
+  tries = 0;
+
+  // we reassigned the variable
+  randomNumber = Math.trunc(Math.random() * 100 + 1);
 });
 
 
